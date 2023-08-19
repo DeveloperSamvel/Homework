@@ -11,6 +11,8 @@ const unshift = (argArr, ...props) => {
     } else {
       argArr[i] = props[i];
     }
+
+    console.log("argArr", argArr);
   }
 
   return argArr.length;
