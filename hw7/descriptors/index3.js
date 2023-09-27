@@ -20,6 +20,9 @@ try {
 console.log(person.firstName);
 console.log(person.lastName);
 
+// classerov lucum@ sxala, ete asenq
+//   person.otherProperty = "otherValue";
+
 // class Immutable {
 //   constructor(obj) {
 //     this._firstName = obj.firstName;
