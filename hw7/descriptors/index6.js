@@ -5,7 +5,13 @@ const validateObject = (user, schema) => {
         return false;
       }
 
-      if (!schema[item].validate(user[item])) {
+      const { writable, validate } = schema[item];
+
+      if (!validate(user[item])) {
+        return false;
+      }
+
+      if (!writable) {
         return false;
       }
     }
@@ -37,5 +43,25 @@ const user2 = {
   age: "18",
 };
 
+const user3 = {
+  name: "Alex",
+  age: 17,
+};
+
+const user4 = {};
+
+Object.defineProperties(user4, {
+  name: {
+    value: "Alex",
+    writable: true,
+  },
+  age: {
+    value: 37,
+    writable: false,
+  },
+});
+
 console.log(validateObject(user, schema));
 console.log(validateObject(user2, schema));
+console.log(validateObject(user3, schema));
+console.log(validateObject(user4, schema));
