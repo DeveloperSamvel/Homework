@@ -13,9 +13,6 @@ const users = [
    
 
 const filterUsers = (users) => {
-    let arr = [];
-
-    arr = users.filter(item => item.lang !== "ru");
-    return arr;
+    return users.filter(({lang}) => lang !== "ru");
 }
 console.log(filterUsers(users));

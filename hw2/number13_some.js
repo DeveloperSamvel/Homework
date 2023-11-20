@@ -12,9 +12,7 @@ const iteration = (item) => {
 
 const some = (arr) => {
   for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
-
-    if (iteration(element)) {
+    if (iteration(arr[i])) {
       return true;
     }
   }

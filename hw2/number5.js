@@ -13,9 +13,6 @@ const users = [
    
 
 const getUserNames = (users) => {
-    let arr = [];
-
-    arr = users.map(item => item.username.length);
-    return arr;
+    return users.map(({username}) => username.length);
 }
 console.log(getUserNames(users));

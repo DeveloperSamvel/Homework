@@ -19,9 +19,6 @@ const users = [
    
 
 const filterByField = (users, field) => {
-    let arr = [];
-
-    arr = users.filter(item => item.isAstronaut);
-    return arr;
+    return users.filter(item => item[field]);
 }
 console.log(filterByField(users, "isAstronaut"));

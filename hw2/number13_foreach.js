@@ -8,11 +8,10 @@ const iteration = (item) => {
 
 const foreach = (arr) => {
   for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
-    iteration(element);
+    iteration(arr[i]);
   }
 
   return;
 };
 
-console.log(foreach(arr));
+foreach(arr);

@@ -7,9 +7,7 @@ const iteration = (acc, element) => {
 const reduce = (arr, initialValue) => {
   let acc = initialValue;
   for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
-
-    acc = iteration(acc, element);
+    acc = iteration(acc, arr[i]);
   }
 
   return acc;

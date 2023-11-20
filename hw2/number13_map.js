@@ -9,9 +9,7 @@ const iteration = (item) => {
 const map = (arr) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
-
-    newArr.push(iteration(element));
+    newArr.push(iteration(arr[i]));
   }
 
   return newArr;

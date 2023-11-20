@@ -31,11 +31,9 @@ const scrabble = (str) => {
   };
   let charsArr = str.split("");
 
-  let sum = charsArr.reduce((acc, el) => {
+  return charsArr.reduce((acc, el) => {
     return acc + charsObj[el];
   }, 0);
-
-  return sum;
 };
 
 console.log(scrabble("qza"));
