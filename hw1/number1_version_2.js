@@ -1,7 +1,5 @@
 "use strict"
 
-"use strict"
-
 function findSign(a, b, c) {
     let number = a * b * c;
 
