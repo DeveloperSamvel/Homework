@@ -16,22 +16,10 @@ const arr = [
   "6",
 ];
 
-// with method parseInt
-const parseInteger = (arr) => {
-  return arr.filter((item) => item === item * 1);
-};
-
-console.log(parseInteger(arr));
-
-// with method parseInt
-const parseIntegerVersion2 = (arr) => {
-  return arr.filter((item) => item === parseInt(item));
-};
-
-// console.log(parseIntegerVersion2(arr));
-
 const parseIntegerVersion3 = (arr) => {
-  return arr.filter((item) => item === Number(item));
+  return arr.filter((item) => {
+    return typeof item === "number" && !isNaN(item);
+  });
 };
 
-// console.log(parseIntegerVersion3(arr));
+console.log(parseIntegerVersion3(arr));

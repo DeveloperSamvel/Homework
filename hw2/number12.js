@@ -8,7 +8,7 @@ const sortBy = (arr, action) => {
         return arr.sort((a, b) => b - a)
     }
 
-    return arr;
+    return "Enter correct sort type";
 }
 
 console.log(sortBy([4, 3, 2, 1], "Asc"));
